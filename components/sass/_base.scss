@@ -106,10 +106,10 @@ body * {
 			@include breakpoint(portrait) {
 				justify-content: space-around;
 				.partner {
-					@include flex-basis(0);
+					@include flex-basis(auto);
 					height: initial;
 					img {
-						max-width: initial;
+						max-width: none;
 					}
 					@include transition(opacity $speed/2 ease);
 					&:hover {
@@ -263,6 +263,7 @@ body * {
 				}
 				&__copy {
 					text-align: left;
+					max-width: rem(650);
 					@include flex(5 0);
 					padding-left: 10%;
 					.testimonial-company {
@@ -331,6 +332,7 @@ body * {
 							@include defaultGradientVertical;
 							@include background-clip(text);
 							-webkit-text-fill-color: transparent;
+							color: $white;
 							line-height: 1;
 							&:first-of-type {
 								font-size: rem(100);
@@ -361,13 +363,19 @@ body * {
 				}
 			}
 			@include breakpoint(large) {
+
 				&__intro, &__plan {
-					@include flex(1 0 0);
+					@include flex(1 0 0%);
 				}
 				&__intro {
 					margin-bottom: 0;
 					text-align: left;
-					@include align-items(flex-start);
+					> div {
+						@include align-items(flex-start);
+						> * {
+							width: 100%;
+						}
+					}
 				}
 			}
 		}

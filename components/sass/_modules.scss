@@ -91,6 +91,7 @@
 				@include background-clip(text);
 				-webkit-text-fill-color: transparent;
 				display: block;
+				padding: rem(5) 0;
 			}
 			&:after {
 				content: '';

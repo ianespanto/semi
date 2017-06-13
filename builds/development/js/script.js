@@ -1,7 +1,5 @@
 'use strict';
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 // Global variables / constants
 var animatedElems = document.querySelectorAll('.animated');
 var didScroll = false,
@@ -63,7 +61,7 @@ function showAnimatedElem(scrollTop) {
 	var delta = 300,
 	    heightInView = void 0;
 
-	[].concat(_toConsumableArray(animatedElems)).forEach(function (section) {
+	[].slice.call(animatedElems).forEach(function (section) {
 		// Show section if height in view is at least delta or half of its own height
 		var alpha = Math.min(section.clientHeight / 2, delta);
 		heightInView = viewport().height + scrollTop - getOffsetTop(section);

@@ -59,7 +59,7 @@ function showAnimatedElem(scrollTop) {
 	let delta = 300,
 		heightInView
 
-	[...animatedElems].forEach(section => {
+	[].slice.call(animatedElems).forEach(section => {
 		// Show section if height in view is at least delta or half of its own height
 		let alpha = Math.min(section.clientHeight/2, delta)
 		heightInView = viewport().height + scrollTop - getOffsetTop(section)

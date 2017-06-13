@@ -67,7 +67,7 @@
 	> * {
 		max-width: rem(500);
 		@include breakpoint(portrait) {
-			max-width: initial;
+			max-width: none;
 		}
 	}
 }

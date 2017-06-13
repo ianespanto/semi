@@ -119,11 +119,13 @@ $copy = $data['home-copy'];
 	<section class="home__plans animated">
 		<div class="inner-wrapper">
 			<div class="plans-content flex flex--responsive medium flex--wrap grid grid--gutters large-gutters align-center width-limit">
-				<div class="plans-content__intro grid__item flex flex--column align-center">
-					<h2><?php echo $copy['plans-heading']; ?></h2>
-					<p class="plans-copy"><?php echo $copy['plans-copy']; ?></p>
-					<p class="plans-question"><?php echo $copy['plans-question']; ?></p>
-					<a class="plans-cta" href="/"><?php echo $copy['plans-cta']; ?></a>
+				<div class="plans-content__intro grid__item">
+					<div class="flex flex--column align-center">
+						<h2><?php echo $copy['plans-heading']; ?></h2>
+						<p class="plans-copy"><?php echo $copy['plans-copy']; ?></p>
+						<p class="plans-question"><?php echo $copy['plans-question']; ?></p>
+						<a class="plans-cta" href="/"><?php echo $copy['plans-cta']; ?></a>
+					</div>
 				</div>
 				<?php foreach($plans as $i=>$p): ?>
 					<div class="plans-content__plan grid__item">
