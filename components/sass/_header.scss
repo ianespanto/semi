@@ -1,0 +1,46 @@
+// Header
+// -------------------------
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	.header-container {
+		height: rem(60);
+		@include align-items(center);
+		.logo {
+			img {
+				display: block;
+				width: rem(65);
+			}
+			@include transition(opacity $speed/2);
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		@include breakpoint(portrait) {
+			height: rem(100);
+			.logo {
+				img {
+					width: initial;
+				}
+			}
+		}
+	}
+}
+
+
+// Footer
+// -------------------------
+
+footer {
+	text-align: center;
+	padding: rem(30) 0;
+	p {
+		font-size: rem(12);
+		color: $gray;
+	}
+}

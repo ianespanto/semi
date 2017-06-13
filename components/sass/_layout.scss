@@ -1,0 +1,73 @@
+.inner-wrapper {
+	margin: 0 auto;
+	max-width: rem(1200);
+	padding: 0 rem(30);
+	position: relative;
+	@include breakpoint(portrait) {
+		width: 95%;
+	}
+	@include breakpoint(landscape) {
+		width: 90%;
+		padding: 0 rem(35);
+	}
+}
+
+.flex {
+	@include display-flex;
+	&--row {
+		@include flex-direction(row);
+	}
+	&--column {
+		@include flex-direction(column);
+	}
+	&--responsive {
+		@include flex-direction(column);
+		@include breakpoint(landscape) {
+			@include flex-direction(row);
+		}
+		&.medium {
+			@include breakpoint(medium) {
+				@include flex-direction(row);
+			}
+		}
+		&.portrait {
+			@include breakpoint(portrait) {
+				@include flex-direction(row);
+			}
+		}
+	}
+	&--wrap {
+		@include flex-wrap(wrap);
+	}
+}
+
+.grid {
+	&--gutters {
+		margin: 0 rem(-15);
+		.grid__item {
+			padding: 0 rem(15);
+		}
+		&.large-gutters {
+			@include breakpoint(landscape) {
+				margin: 0 rem(-25);
+				.grid__item {
+					padding: 0 rem(25);
+				}
+			}
+		}
+	}
+}
+
+.align-center {
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+.width-limit {
+	> * {
+		max-width: rem(500);
+		@include breakpoint(portrait) {
+			max-width: initial;
+		}
+	}
+}

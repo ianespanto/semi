@@ -1,0 +1,32 @@
+// Global
+$global-width: rem(1440);
+
+// Fonts
+$font-body: 'Open Sans', Helvetica, sans-serif;
+$font-heading: 'Montserrat', Helvetica, sans-serif;
+$font-serif: 'Merriweather', Helvetica, serif;
+
+// UI Colors
+$darkgray: #8f8f8f;
+$gray: #999;
+$silver: #eee;
+$lightgray: #fafafa;
+$darkpurple: #6867c3;
+$lightpurple: #952be5;
+$white: #fff;
+$black: #333;
+
+// Breakpoints
+$breakpoints: (
+	mini: 0,
+	tablet: 0,
+	small: rem(480),
+	medium: rem(640),
+	portrait: rem(768),
+	landscape: rem(1024),
+	large: rem(1200)
+);
+
+// Animations & Transitions
+$speed: 300ms;
+$default-transition-duration: $speed;
